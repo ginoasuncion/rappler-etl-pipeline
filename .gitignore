@@ -1,0 +1,15 @@
+# Ignore Python bytecode files
+__pycache__/
+*.pyc
+
+# Ignore virtual environment
+.env/
+
+# Ignore sensitive files such as service account keys
+data-engineering-hs-bkk-e0946ca25e88.json
+
+# Ignore log files
+*.log
+
+# Ignore any JSON files (if necessary)
+*.json

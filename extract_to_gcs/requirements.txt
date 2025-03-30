@@ -1,0 +1,7 @@
+Flask
+google-cloud-storage
+google-cloud-bigquery
+requests
+gunicorn
+beautifulsoup4
+
