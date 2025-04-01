@@ -46,7 +46,7 @@ rappler-etl-pipeline/
 
 ---
 
-### ✅ Deploy `extract-to-gc` to Cloud Run
+### ✅ Deploy `extract-to-gcs` to Cloud Run
 gcloud run deploy extract-to-gcs \
   --source ./extract_to_gcs \
   --region us-central1 \
