@@ -46,6 +46,24 @@ rappler-etl-pipeline/
 
 ---
 
+### ✅ Deploy `extract-to-gc` to Cloud Run
+gcloud run deploy extract-to-gcs \
+  --source ./extract_to_gcs \
+  --region us-central1 \
+  --allow-unauthenticated \
+  --service-account=data-engineering-hs-bkk@data-engineering-hs-bkk.iam.gserviceaccount.com \
+  --set-env-vars "GCS_BUCKET=rappler-hs-bkk"
+
+### ✅ Deploy `load-to-bigquery` to Cloud Run
+
+```bash
+gcloud run deploy load-to-bigquery \
+  --source ./load_to_bigquery \
+  --region us-central1 \
+  --allow-unauthenticated \
+  --service-account=data-engineering-hs-bkk@data-engineering-hs-bkk.iam.gserviceaccount.com \
+  --set-env-vars "GCP_PROJECT=data-engineering-hs-bkk,BQ_DATASET=rappler,BQ_TABLE=rappler_articles"
+```
 ### ✅ Deploy `load-to-bigquery` to Cloud Run
 
 ```bash
